@@ -33,11 +33,34 @@ python3 style_checker.py <file_to_check.c>
 python3 style_checker.py my_program.c
 ```
 
+## Style Guidelines Checked
+
+This tool automatically checks your C code against the following **10 style guidelines**:
+
+| Rule | Name | Description | Type |
+|------|------|-------------|------|
+| **TABS** | Tab Characters | No tab characters allowed - use spaces only | Error |
+| **LLEN** | Line Length | Lines should be ≤ 60 characters (skips test functions) | Warning |
+| **MAGIC** | Magic Numbers | Avoid magic numbers (except 0, 1, -1) - use named constants | Warning |
+| **FLEN** | Function Length | Functions should be ≤ 20 lines (skips test functions) | Warning |
+| **GOTO** | Forbidden Keywords | No `goto` or `continue` statements allowed | Error |
+| **INFIN** | Infinite Loops | No infinite loops (`while(1)`, `for(;;)`, etc.) | Error |
+| **CAPS** | Constant Names | `#define` constants must be UPPERCASE | Error |
+| **RETV** | Return Values | Don't ignore return values from functions like `scanf`, `malloc`, `fopen` | Warning |
+| **BRACE** | Missing Braces | Control structures should use braces `{}` | Warning |
+| **FLAGS** | Compilation | Code must compile with strict flags: `-Wall -Wextra -Wfloat-equal -Wvla -pedantic -std=c99 -g3` | Error |
+
+### Special Handling for Test Functions
+- **Test functions are automatically detected** and excluded from `LLEN`, `MAGIC`, `FLEN`, and `RETV` checks
+- Test functions are identified by having "test" in their name (case-insensitive)
+
 ## Features
 
-- Checks basic C style guidelines
+- Checks 10 fundamental C style guidelines automatically
+- Smart test function detection - skips style checks where appropriate
 - Easy to use command-line interface
-- Helps avoid common formatting mistakes
+- Clear results with errors vs warnings distinction
+- Helps avoid common formatting mistakes and penalties
 - Based on established C programming standards
 
 ## Limitations
