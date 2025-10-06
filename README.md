@@ -1,34 +1,75 @@
-# A simple style checker for the non-subjective parts of the style guidelines as per the style guide at https://github.com/csnwc/Exercises-In-C/blob/main/exercisesInC.pdf
+# C Style Checker
 
-## Small note on terms of usage
+A simple style checker for the non-subjective parts of the C programming style guidelines as per the [Exercises in C Style Guide](https://github.com/csnwc/Exercises-In-C/blob/main/exercisesInC.pdf).
 
-This is a small personal project made to help people adhere to the style guidelines in the Exercises in C book. A star on this repo is appreciated and is free so therefore it is strongly advised.
+## About
 
-## Usage
+This is a personal project designed to help developers adhere to the style guidelines outlined in the "Exercises in C" book. It automatically checks your C code against common style rules to help you avoid simple formatting mistakes.
 
-First clone the repo:
+**If you find this helpful star the repository, it's FREE!**
+
+## Installation & Usage
+
+### 1. Clone the Repository
 
 ```bash
-git clone
+git clone https://github.com/mpalazzo02/style_checker_COSM1201.git
 ```
 
-Then navigate to the directory:
+### 2. Navigate to the Directory
 
-```bashcd Exercises-In-C-style-checker
-
+```bash
+cd style_checker_COSM1201
 ```
 
-Then run the script with the file you want to check as an argument:
+### 3. Run the Style Checker
 
-```bash python3 style_checker.py <file_to_check.c>
-
+```bash
+python3 style_checker.py <file_to_check.c>
 ```
+
+**Example:**
+```bash
+python3 style_checker.py my_program.c
+```
+
+## Features
+
+- Checks basic C style guidelines
+- Easy to use command-line interface
+- Helps avoid common formatting mistakes
+- Based on established C programming standards
 
 ## Limitations
 
-This script is a simple style checker and does not cover all the style guidelines. It is meant to check the basics so that you are not penalised for simple mistakes.
-It is not perfect so please use it as a guide as opposed to Gospel truth.
+**Important Notes:**
+
+- This script is a **basic** style checker and does not cover all style guidelines
+- It focuses on the fundamentals to help you avoid simple penalties
+- **Not perfect** - use as a guide, not absolute truth
+- Manual review of your code is still recommended
 
 ## Contributing
 
-Feel free to fork the repo and make a pull request with any improvements or additional checks.
+We welcome contributions! Here's how you can help:
+
+1. Fork the repository
+2. Make your improvements or add new checks
+3. Test your changes
+4. Submit a pull request
+
+### Ideas for Contributions:
+- Additional style checks
+- Better error messages
+- Performance improvements
+- Documentation updates
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## Support
+
+If you encounter any issues or have suggestions, please:
+- [Open an issue](https://github.com/mpalazzo02/style_checker_COSM1201/issues)
+- Start a discussion
